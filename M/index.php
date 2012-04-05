@@ -38,9 +38,29 @@ if(isset($_POST['sub']))
 			</script>
 		<?php 
 	}
+	if($row==1)
+	{
+		session_start();
+		$_SESSION['mail']=$_POST['email'];
+		//在数据库中查找出用户名->session
+		
+		$sql="select * from user where mail ='$mail' and password = '$password'";
+		$result=mysql_query($sql,$link);
+		$row=mysql_fetch_array($result);
+		//echo "$row[username]";	
+			
+		$_SESSION['username']=$row['username'];
+		$_SESSION['uid']=$row['id'];	
+			
+		//$a=$_SESSION['uid'];
+		//echo "$a";		
+			?>
+			<script type='text/javascript'>    
+				window.location.href="personal.php"; 
+			</script>
+		<?php 
+		
+	}
 			
 }
-	
-	
-
 ?>

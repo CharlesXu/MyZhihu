@@ -1,5 +1,6 @@
 <html>
 <head>
+	<title>Login Page</title>
 	<meta charset="GBK">
 	<style type="text/css">		
 		html{background:#0d7bd5 ;height:100%;}		
@@ -11,6 +12,7 @@
 					background-clip:padding-box;border-radius:5px}
 		.button{width:70px;height:40px;background-color:#0d7bd5;
 						float:left;
+						font-family:"隶书";font-size:20px;
 						border:1px solid;
 						border-color:blue;
 						cursor:pointer;
@@ -21,7 +23,7 @@
 						float:left;
 						border-radius: 12px;
     				border-radius: 12px;
-    				cursor:pointer
+    				cursor:pointer;
 						}
 		.logo {width:130px;height:99px;background-image:url(logo.png);
 					}
@@ -44,14 +46,14 @@
 </head>
 <body>
 		<div class="regist">
-				<a href="register.php" class="register"><input class="button1" type="button" value="申请注册账号"/></a>  
+				<a href="register.php" ><input class="button1" type="button" value="申请注册账号"/></a>  
 		</div>
 		<div id="login" style="float:left" >
 			<a href="login.php"><h1>My zhihu</h1></a>
 			<div class="logo">
 			</div>
-			<form class="login" action="index.php" method="POST" >				
-				<input class="text" type="email" name="email" spellcheck="false" placeholder="邮 箱" autofocus tabindex="1">
+			<form class="login" action="index.php,personal.php" method="POST" >				
+				<input class="text" type="email" name="email" spellcheck="false" placeholder="邮 箱 或 用 户 名" autofocus tabindex="1">
 				<input class="text" type="password" name="password" placeholder="密 码" tabindex="2">
 				<input class="button" type="submit" name="sub" value="登 陆" tabindex="3"/>
 				<div class="actions">

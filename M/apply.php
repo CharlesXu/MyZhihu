@@ -18,9 +18,10 @@ if(isset($_POST['register']))
 		?>
 		<script type="text/javascript">
 			alert('信息填写不完整，请重新填写！');
-			window.location.href="register.php";
+			window.location.href="register.php";			
 		</script>
 		<?php
+		exit;
 	}
 	
 	if($password!=$password1)
@@ -28,9 +29,10 @@ if(isset($_POST['register']))
 		?>
 		<script type="text/javascript">
 			alert('两次密码不相同，请重新填写！');
-			window.location.href="register.php";
+			window.location.href="register.php";			
 		</script>
 		<?php
+		exit;
 	}
 	//邮箱验证还没做
 	if(!get_magic_quotes_gpc()){
@@ -66,8 +68,10 @@ if(isset($_POST['register']))
 			<script type='text/javascript'>
 				alert('用户名重复！不能重复注册！');
 				window.location.href="register.php";
+				
 			</script>
-			<?php 
+			<?php
+			exit;
 		}
 		
 		//验证邮箱是否注册
@@ -79,9 +83,10 @@ if(isset($_POST['register']))
 			?>
 				<script type='text/javascript'>
 					alert('邮箱已被注册！');
-					window.location.href="register.php";
+					window.location.href="register.php";					
 				</script>
 	  	<?php
+	  	exit;
 		}
 		
 	else

@@ -19,6 +19,7 @@ if(isset($_POST['register']))
 		<script type="text/javascript">
 			alert('信息填写不完整，请重新填写！');
 			window.location.href="register.php";
+			exit;
 		</script>
 		<?php
 	}
@@ -29,6 +30,7 @@ if(isset($_POST['register']))
 		<script type="text/javascript">
 			alert('两次密码不相同，请重新填写！');
 			window.location.href="register.php";
+			exit;
 		</script>
 		<?php
 	}
@@ -66,8 +68,10 @@ if(isset($_POST['register']))
 			<script type='text/javascript'>
 				alert('用户名重复！不能重复注册！');
 				window.location.href="register.php";
+				
 			</script>
-			<?php 
+			<?php
+			exit;
 		}
 		
 		//验证邮箱是否注册
@@ -80,6 +84,7 @@ if(isset($_POST['register']))
 				<script type='text/javascript'>
 					alert('邮箱已被注册！');
 					window.location.href="register.php";
+					exit;
 				</script>
 	  	<?php
 		}
@@ -93,8 +98,8 @@ if(isset($_POST['register']))
 		//sleep(200);
 		?>
 		<script type="text/javascript">
-			alert('恭喜你！注册成功！');
-			alert('马上登陆');
+			alert('恭喜你！注册成功！马上登陆');
+			//alert('');
 			window.location.href="login.php";
 		</script>
 		<?php

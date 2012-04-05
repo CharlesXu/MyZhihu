@@ -32,11 +32,18 @@
     				font-family:"¡• È";font-size:20px;  
     				cursor:pointer;  
 						}
+			.regist{
+					position:absolute;top:30px;right:60px;
+					}
+			a:link{text-decoration:none;}
 			#h3{position:absolute;left:30px;}
 			#label{margin-left:30px}
 		</style>
 	</head>
 	<body>
+		<div class="regist">
+				<a href="register.php" class="register"><input class="button1" type="button" value="∑µªÿµ«¬Ω"/></a>  
+		</div>
 		<div class="logo"></div>
 		<div class="main">
 			<div class="head">

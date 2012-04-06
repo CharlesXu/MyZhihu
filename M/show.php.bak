@@ -3,32 +3,37 @@
 	
 	$link=mysql_connect('localhost','root','','zhihu')or die("连接数据库失败".mysql_error());//连接数据库
 	mysql_select_db('zhihu'); //选择数据库
-	$sql="select * from question";
+	//按照ID倒序查询数据库
+	$sql="select * from question order   by   ID   desc ";
 	$result=mysql_query($sql,$link);
 	
 	//对第一个的处理 		
 	$row=mysql_fetch_array($result);
-		$id=$row['id'];
+		$id=$row['id']*3;
 		$author=$row['author'];
 		$a=$row['title'];
 		$b=$row['content'];
 		//echo "<h3>$id</h3>";		
 		echo "领域：$a<br/>";
-		echo "提问者：<a href='#' style='color:red'>$author</a>";
-		echo "&nbsp&nbsp <a href='answer/$id'><h2> $a</h2></a>";
+		echo "提问者：<a href='#' style='color:red;size:20px;'>$author</a>";
+		echo "&nbsp&nbsp <a href='http://localhost/MyZhiHu/answer.php?p=$id'><h3> $a</h3></a>";
 		echo "&nbsp&nbsp&nbsp&nbsp$b</br><hr>";
 	
 	while($row)
 	{
 		$row=mysql_fetch_array($result);
-		$id=$row['id'];
+		$id=$row['id']*3;
 		$author=$row['author'];
 		$a=$row['title'];
 		$b=$row['content'];
 		//echo "<h3>$id</h3>";
-		echo "领域：$a<br/>";
-		echo "提问者：<a href='#' style='color:red'>$author</a>";
-		echo "&nbsp&nbsp<a href='#'><h2> $a</h2></a>";
-		echo "&nbsp&nbsp&nbsp&nbsp$b</br><hr>";
+		if($row)
+		{
+			echo "领域：$a<br/>";
+			echo "提问者：<a href='#' style='color:red'>$author</a>";
+			echo "&nbsp&nbsp<a href='http://localhost/MyZhiHu/answer.php?p=$id'><h3> $a</h3></a>";
+			echo "<div class='abc' width='50px'>&nbsp&nbsp&nbsp&nbsp$b</div></br><hr>";
+		}
+		
 	}
 ?>

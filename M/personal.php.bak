@@ -108,7 +108,7 @@
 			<br/><br/>
 			<hr/>
 			<p>
-			<a id="right1" href="setting.php">设置个人资料</a>
+			<a id="right1" href="setting.php">修改个人资料</a>
 			<hr/>
 			<p>
 			<a id="right1" href="personal.php">邀请好友</a>

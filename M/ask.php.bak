@@ -34,7 +34,7 @@
 		</style>
 	</head>
 	<body>
-		<h1>This is a test</h1>
+		
 		<?php
 		require 'head.php';
 		?>

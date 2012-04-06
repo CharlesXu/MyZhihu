@@ -68,7 +68,7 @@
 			
 			<p>
 				<label for="intro" id="asklabel">问题描述<br/></label>
-				<textarea class="asktext2" id="text2" name="content" placeholder="详细描述你的问题"></textarea>
+				<textarea class="asktext2" id="text2" name="content" placeholder="详细描述你的问题(注意输入文本的格式尽量好看)"></textarea>
 			</p>
 			
 			<input class="askbutton1" type="submit" name="ask" value="我要提问" />

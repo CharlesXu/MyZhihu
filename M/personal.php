@@ -84,14 +84,14 @@
 			</form>
 		</div>				 
 		</div>
+		
 		<div class='center'>
 			<h3>最新动态</h3><hr/>
 			<?php
 			require 'show.php';
 			?>
-			
-			
 		</div>
+		
 		<div class="right">
 			<p>
 			<a id="right1" href="personal.php">我的草稿</a>

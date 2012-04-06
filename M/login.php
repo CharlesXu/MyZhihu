@@ -15,12 +15,13 @@
 						font-family:"¡• È";font-size:20px;
 						border:1px solid;
 						border-color:blue;
+						box-shadow:3px 2px 2px #000000 ;
 						cursor:pointer;
 						border-radius: 12px;
     				border-radius: 12px;
 						}
 		.button1{width:100px;height:30px;background-color:#0d7bd5;
-						float:left;
+						float:left;box-shadow:3px 2px 2px #000000 ;
 						border-radius: 12px;
     				border-radius: 12px;
     				cursor:pointer;

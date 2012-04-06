@@ -24,14 +24,15 @@
 				color:white;
 				}
 			.text{width:320px;height:30px;margin-left:30px;border-radius: 3px;}
-			.text2{width:320px;height:60px;margin-left:30px;border-radius: 3px;}
+			.text2{width:320px;height:60px;margin-left:30px;
+				border-radius: 3px;}
 			.button1{width:95px;height:40px;background-color:#0d7bd5;
 						float:right;margin-right:30px;
 						border-radius: 12px;
     				border-radius: 12px;
     				font-family:"¡• È";font-size:20px;  
     				cursor:pointer;  
-						}
+						box-shadow:3px 2px 2px #000000 ;}
 			.regist{
 					position:absolute;top:30px;right:60px;
 					}

@@ -44,10 +44,10 @@
 			           color:Black}
 			.menu a:hover {background-color:#dfeeff }
 			.right{
-					width:250px;background-color:#ffffff;
-					margin-right:350px ;margin-top:47px;	float:right;			
+					width:200px;background-color:#ffffff;
+					margin-right:200px ;margin-top:47px;	float:right;			
 				}
-			.center{width:800px;background-color:#ffffff;
+			.center{width:650px;background-color:#ffffff;
 				float:left;margin-left:200px;margin-top:47px;}
 			.information{width:160px;float:right;margin-right:20px;}
 			img{width:40px;height:40px;margin-top:10px; }
@@ -60,7 +60,7 @@
 	<body>
 		
 		<div class='center'>
-			<h3>问题及回答</h3><hr/>			
+			<p><h3>问题及回答</h3><p><hr/>			
 		</div>
 		
 		<div class="right">

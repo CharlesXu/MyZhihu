@@ -15,6 +15,7 @@
 						font-family:"隶书";font-size:20px;
 						border:1px solid;
 						border-color:blue;
+						box-shadow:3px 2px 2px #000000 ;
 						cursor:pointer;
 						border-radius: 12px;
     				border-radius: 12px;
@@ -52,7 +53,7 @@
 			<a href="login.php"><h1>My zhihu</h1></a>
 			<div class="logo">
 			</div>
-			<form class="login" action="index.php,personal.php" method="POST" >				
+			<form class="login" action="index.php" method="POST" >				
 				<input class="text" type="email" name="email" spellcheck="false" placeholder="邮 箱 或 用 户 名" autofocus tabindex="1">
 				<input class="text" type="password" name="password" placeholder="密 码" tabindex="2">
 				<input class="button" type="submit" name="sub" value="登 陆" tabindex="3"/>

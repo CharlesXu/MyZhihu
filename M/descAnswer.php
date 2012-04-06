@@ -9,7 +9,7 @@
 			#answerText{width:550px;height:200px;margin-left:50px;border:2px solid; border-radius:12px;}
 			#huida{width:90px;height:40px;border-radius:5px;background-color:#0d7bd5;
 						float:right;margin-top:30px;margin-right:60px;
-						cursor:pointer;  }
+						cursor:pointer;border:1px solid;  }
 		</style>
 		
 	</head>
@@ -47,7 +47,7 @@
 			
 			//显示回答  第一个的处理
 			//根据回答表查找到回答者的id(answerAuthorId)
-			$sql="select * from answer where qid='$id1'";
+			$sql="select * from answer where  by   ID   desc and qid='$id1'";
 			$result1=mysql_query($sql,$link);			
 			$answerRow=mysql_fetch_array($result1);			
 			$answerAuthorId=$answerRow['uid'];

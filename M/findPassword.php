@@ -29,7 +29,8 @@
 						border-radius: 12px;
     				border-radius: 12px;
     				font-family:"¡• È";font-size:20px ;
-    				cursor:pointer;   
+    				cursor:pointer; 
+    				box-shadow:3px 2px 2px #000000 ;  
 						}
 			.regist{
 					position:absolute;top:30px;right:60px;

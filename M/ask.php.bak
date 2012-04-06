@@ -89,7 +89,7 @@
 		{
 			?>
 				<script type="text/javascript">
-					alert('信息填写不完整，请重新填写！');
+					alert('信息填写不完整，请填写完整！');
 					window.location.href="ask.php";			
 				</script>
 			<?php
@@ -99,7 +99,7 @@
 			$link=mysql_connect('localhost','root','','zhihu')or die("连接数据库失败".mysql_error());//连接数据库
 			mysql_select_db('zhihu'); //选择数据库
 			
-			$sql="insert into question( title,time,author,class,content) values ('$title' ,'$time', '$author' , '$class' , '$content') ";
+			$sql="insert into question( title,uid,time,author,class,content) values ('$title' ,'$uid','$time', '$author' , '$class' , '$content') ";
 			mysql_query($sql,$link);//执行插入操作
 			?>
 				<script type="text/javascript">

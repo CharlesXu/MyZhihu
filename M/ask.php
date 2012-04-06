@@ -34,7 +34,7 @@
 		</style>
 	</head>
 	<body>
-		<h1>This is a test</h1>
+		
 		<?php
 		require 'head.php';
 		?>
@@ -89,7 +89,7 @@
 		{
 			?>
 				<script type="text/javascript">
-					alert('信息填写不完整，请重新填写！');
+					alert('信息填写不完整，请填写完整！');
 					window.location.href="ask.php";			
 				</script>
 			<?php

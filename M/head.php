@@ -23,12 +23,13 @@
 				background-color:#0d7bd5;
 				border:none;}
 			.link{width:80px;height:38px;}		
-			
+			.information{width:180px;float:right}
 			.menu{font-weight:bold;
 			         color:white;
 			         border:0px solid #0d7bd5;
 			         text-align:center;
-			         width:190px;
+			         float:left;
+			         width:100px;
 			         height:30px;
 			         background-color:#0d7bd5;float:right;
 			         margin:20px 10px 0 0;
@@ -38,12 +39,12 @@
 			.menu a{display:none;
 			           border-top:2px solid #0d7bd5;
 			           background-color:white;
-			           width:190px;
+			           width:100px;
 			           height:30px;
 			           text-decoration:none;
 			           color:Black}
 			.menu a:hover {background-color:#dfeeff }
-			
+			img{margin-top:10px;width:40px;height:40px;}
 			#zhi{font-family:"隶书";font-size:40px;}			
 			a:link{text-decoration:none;}		
 		</style>
@@ -59,16 +60,19 @@
 				<a href="personal.php"> <input class="text2"    type="button" value="主页"  /> </a>
 				<a href='hobby.php'>    <input class="text2"    type="button" value="领域"  /> </a>
 				<a href='notice.php'>   <input class="text2"     type="button" value="通知" /> </a>	
-				<div class='menu'>
+				<div class="information">
+					<a  href='setting.php' style="float:left"><img  src='a.png' alt="点击设置个人资料"/></a>
+					<div class='menu'>				
 					<?php	
 						session_start();
-						$mail=$_SESSION['mail'];
+						$mail=$_SESSION['username'];
 						echo "$mail";
 					?>
 						<a href="personal.php">主页</a>
             <a href="letter.php">私信</a>
             <a href="setting.php">设置</a>
             <a href="login.php">退出</a>
+				</div>
 				</div>			
 			</form>
 		</div>				 

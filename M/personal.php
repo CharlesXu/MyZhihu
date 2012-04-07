@@ -70,11 +70,14 @@
 				<a href='hobby.php'>    <input class="text2"    type="button" value="领域"  /> </a>
 				<a href='notice.php'>   <input class="text2"     type="button" value="通知" /> </a>
 		<div class="information">
-				<a href="setting.php"><img src="a.png" alt="点击设置个人资料"/></a>	
+			<?php
+				session_start();
+				$username=$_SESSION['username'];				
+				echo "<a  href='setting.php?name=$username' style='float:left'><img  src='a.png' alt='点击设置个人资料'/></a>";
+			?>
 				<div class='menu'>
 					<?php	
-						session_start();
-						$username=$_SESSION['username'];
+						
 						echo "<a href='setting.php?name=$username'>$username</a>";
 						echo "$username";
 					?>
@@ -85,7 +88,9 @@
 				</div>
 		</div>					
 			</form>
-		</div>				 
+			
+		</div>
+			<a href="login.php" style="float:right;margin-right:30px"><h3>退出</h3></a>				 
 		</div>
 		
 		<div class='center'>
@@ -112,7 +117,9 @@
 			<br/><br/>
 			<hr/>
 			<p>
-			<a id="right1" href="setting.php">修改个人资料</a>
+			<?php	
+				echo "<a  href='setting.php?name=$username' id='right1'>修改个人资料</a>";
+			?>
 			<hr/>
 			<p>
 			<a id="right1" href="personal.php">邀请好友</a>			

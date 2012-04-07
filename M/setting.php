@@ -11,8 +11,8 @@
 					float:left;
 					}
 			.setRight{
-						width:30%;height:1000px;background-color:#ffffff;						
-						float:right;
+						width:20%;height:1000px;background-color:#ffffff;						
+						float:left;margin-left:20px;
 						}
 			.setTable{width:99%;height:160px;border:1px solid lightgray;border-radius:5px;
 						margin-top:40px;background-color:#ffffff;}

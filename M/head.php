@@ -61,11 +61,14 @@
 				<a href='hobby.php'>    <input class="text2"    type="button" value="领域"  /> </a>
 				<a href='notice.php'>   <input class="text2"     type="button" value="通知" /> </a>	
 				<div class="information">
-					<a  href='setting.php' style="float:left"><img  src='a.png' alt="点击设置个人资料"/></a>
-					<div class='menu'>				
-					<?php	
+					<?php
 						session_start();
 						$mail=$_SESSION['username'];
+						echo "<a  href='setting.php?name=$mail' style='float:left'><img  src='a.png' alt='点击设置个人资料'/></a>"
+					?>	        
+					<div class='menu'>				
+					<?php	
+						
 						echo "<a href='setting.php?name=$mail'>$mail</a>";
 						echo "$mail";
 					?>
@@ -76,7 +79,8 @@
 				</div>
 				</div>			
 			</form>
-		</div>				 
+		</div>
+			<a href="login.php" style="float:right;margin-right:30px"><h3>退出</h3></a>			 
 		</div>
 	</body>
 </html>

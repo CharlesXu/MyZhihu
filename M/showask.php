@@ -36,6 +36,7 @@
 			$author=$row['author'];
 			$a=$row['title'];
 			$b=$row['content'];
+			$time=$row['time'];
 			
 			//session_start();
 			$_SESSION['qid']=$id;
@@ -44,6 +45,7 @@
 			echo "<h1 style='margin-top:0px;float:top;'> $a</h1>";
 			echo "领域：$a<p>";
 			echo "提问者：$author<p>";
+			echo "提问时间：$time<p>";
 			echo "&nbsp&nbsp&nbsp&nbsp$b<hr>";
 			
 			//显示回答  第一个的处理
@@ -64,7 +66,7 @@
 			if($answerRow)
 			{
 				echo "<h3>回答</h3><hr/>";
-				echo "回答者：$answerAuthor<p>";
+				echo "回答者：$answerAuthor<br/>";
 				echo "时间：$time<p>";
 				echo "&nbsp&nbsp&nbsp&nbsp$answerContent<hr/>";
 			}

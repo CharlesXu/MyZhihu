@@ -6,7 +6,7 @@
 				float:left-top;margin-left:200px;}
 			.answerText	{width:40%;height:400px;background-color:#ffffff;
 								float:left;margin-left:24%;margin-top:0px;}
-			#answerText{width:100%;height:200px;margin-left:30%;border:2px solid; border-radius:12px;}
+			#answerText{width:100%;height:200px;margin-left:0%;border:2px solid; border-radius:12px;}
 			#huida{width:90px;height:40px;border-radius:5px;background-color:#0d7bd5;
 						float:right;margin-top:30px;margin-right:60px;
 						cursor:pointer;border:1px solid; box-shadow:3px 2px 2px #000000 ; }
@@ -36,14 +36,16 @@
 			$author=$row['author'];
 			$a=$row['title'];
 			$b=$row['content'];
+			$time=$row['time'];
 			
 			//session_start();
 			$_SESSION['qid']=$id;
 			
 			echo "<h3> 问题</h1>";	
 			echo "<h1 style='margin-top:0px;float:top;'> $a</h1>";
-			echo "领域：$a<p>";
-			echo "提问者：$author<p>";
+			echo "领域：$a<br/>";
+			echo "提问者：$author<br/>";
+			echo "提问时间：$time<p>";
 			echo "&nbsp&nbsp&nbsp&nbsp$b<hr>";
 			
 			//显示回答  第一个的处理

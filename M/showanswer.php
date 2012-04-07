@@ -1,12 +1,12 @@
 <html>
 	<head>
-		<title>知乎-主页</title>
+		<title>用户所回答的主页</title>
 		<style type="text/css">			
 			.center{width:800px;background-color:#ffffff;
 				float:left-top;margin-left:200px;}
 			.answerText	{width:40%;height:400px;background-color:#ffffff;
 								float:left;margin-left:24%;margin-top:0px;}
-			#answerText{width:100%;height:200px;margin-left:0%;border:2px solid; border-radius:12px;}
+			#answerText{width:100%;height:200px;border:2px solid; border-radius:12px;}
 			#huida{width:90px;height:40px;border-radius:5px;background-color:#0d7bd5;
 						float:right;margin-top:30px;margin-right:60px;
 						cursor:pointer;border:1px solid; box-shadow:3px 2px 2px #000000 ; }
@@ -22,8 +22,8 @@
 				
 		<div class='center'>
 			<?php
-			$id1=$_GET['p']/3;
-			//echo "$id";
+			$id1=$_GET['a'];
+			//echo "$id1";
 			
 			$link=mysql_connect('localhost','root','','zhihu')or die("连接数据库失败".mysql_error());//连接数据库
 			mysql_select_db('zhihu'); //选择数据库

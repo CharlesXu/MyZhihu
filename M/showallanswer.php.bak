@@ -32,7 +32,6 @@
 			#img{width:80px;height:80px;}
 			#bianji{float:right;margin-right:30px;margin-top:10px;}
 			#tiwen{float:left;margin-top:8px;margin-left:10px;}
-			#shanchu{float:right;margin-right:20px;}
 		</style>
 	</head>
 	<head>
@@ -61,18 +60,11 @@
 			</div>
 			
 			<!--展示该用户所有提问的问题。-->
-			<div class="setTable1">
-				<div class="setTop">
-					<?php
-						//$name=$_GET['name'];
-						echo "<a href='#' id='tiwen'><b>$name 的提问</b>";
-					?>
-				</div>
-				<div class="setInfo1">
+					
 					<?php
 						$link=mysql_connect('localhost','root','','zhihu')or die("连接数据库失败".mysql_error());//连接数据库
 						mysql_select_db('zhihu'); //选择数据库
-						//按照author查询数据库
+						//按照ID倒序查询数据库
 						$sql="select * from question where author ='$name' ";
 						$result=mysql_query($sql,$link);
 						$QuRow=mysql_fetch_array($result);						
@@ -82,8 +74,8 @@
 						
 						//将来实现点击一个题目链接进入题目界面
 						$num=1;
-						echo "&nbsp<p><a href='showask.php?p=$id'><b> $num:$title</b></a>";
-						echo "<a href='deletequestion.php?id=$id&name=$name' id='shanchu'>删除</a><p><hr/>";
+						//echo "&nbsp<p><a href='showask.php?p=$id'><b> $num:$title</b></a><br/><p>";
+						
 						while($QuRow)
 						{
 							$QuRow=mysql_fetch_array($result);						
@@ -92,14 +84,11 @@
 							$id=$QuRow['id'];
 							if($title)
 							{
-								echo "<p>&nbsp&nbsp<a href='showask.php?p=$id'><b> $num:$title</b>";
-								echo "<a href='deletequestion.php?id=$id &name=$name' id='shanchu'>删除</a><p><hr/>";	
+								//echo "&nbsp&nbsp<a href='showask.php?p=$id'><b> $num:$title</b></br><p>";	
 							}													
 						}					
 						
 					?>
-				</div>
-			</div>
 			
 			<!--展示该用户的所有回答过的问题-->
 			<div class="setTable1">
@@ -156,8 +145,9 @@
 			</div>
 		</div>
 		<div class="setRight">
-			<a href="setting.php"><h3>个人主页</h3></a>
+			
 			<?php
+			echo "<a href='setting.php?name=$name'><h3>个人主页</h3></a>";
 			echo "<a href='showallask.php?name=$name'>所有问题</a><p>";
 			echo "<a href='showallanswer.php?name=$name'>所有回答</a><hr/>";
 			?>

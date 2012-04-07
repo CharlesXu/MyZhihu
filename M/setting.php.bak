@@ -83,7 +83,7 @@
 						//将来实现点击一个题目链接进入题目界面
 						$num=1;
 						echo "&nbsp<p><a href='showask.php?p=$id'><b> $num:$title</b></a>";
-						echo "<a href='deletequestion.php?id=$id&name=$name' id='shanchu'>删除</a><p><hr/>";
+						echo "<a href='deletequestion.php?id=$id ?name=$name' id='shanchu'>删除</a><p><hr/>";
 						while($QuRow)
 						{
 							$QuRow=mysql_fetch_array($result);						
@@ -93,7 +93,7 @@
 							if($title)
 							{
 								echo "<p>&nbsp&nbsp<a href='showask.php?p=$id'><b> $num:$title</b>";
-								echo "<a href='deletequestion.php?id=$id &name=$name' id='shanchu'>删除</a><p><hr/>";	
+								echo "<a href='deletequestion.php?id=$id ?name=$name' id='shanchu'>删除</a><p><hr/>";	
 							}													
 						}					
 						

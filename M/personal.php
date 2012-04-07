@@ -44,11 +44,13 @@
 			           color:Black}
 			.menu a:hover {background-color:#dfeeff }
 			.right{
-					width:200px;background-color:#ffffff;
-					margin-right:200px ;margin-top:47px;	float:right;			
+					width:10%;background-color:#ffffff;
+					margin-right:24% ;margin-top:47px;	float:right;			
 				}
-			.center{width:650px;background-color:#ffffff;
-				float:left;margin-left:200px;margin-top:47px;}
+			.center{width:40%;height:auto;background-color:#ffffff;
+				float:left;margin-left:24%;margin-top:47px;
+				}
+			
 			.information{width:160px;float:right;margin-right:20px;}
 			img{width:40px;height:40px;margin-top:10px; }
 			#zhi{font-family:"隶书";font-size:40px;}			
@@ -73,7 +75,7 @@
 					<?php	
 						session_start();
 						$username=$_SESSION['username'];
-						echo "<a href='setting.php'>$username</a>";
+						echo "<a href='setting.php?name=$username'>$username</a>";
 						echo "$username";
 					?>
 						<a href="personal.php">主页</a>
@@ -91,7 +93,8 @@
 			<?php
 			require 'show.php';
 			?>
-		</div>
+			
+		</div>		
 		
 		<div class="right">
 			<p>
@@ -112,8 +115,7 @@
 			<a id="right1" href="setting.php">修改个人资料</a>
 			<hr/>
 			<p>
-			<a id="right1" href="personal.php">邀请好友</a>
-			
+			<a id="right1" href="personal.php">邀请好友</a>			
 		</div>
 		
 		

@@ -66,7 +66,7 @@
 					<?php	
 						session_start();
 						$mail=$_SESSION['username'];
-						echo "<a href='setting.php'>$mail</a>";
+						echo "<a href='setting.php?name=$mail'>$mail</a>";
 						echo "$mail";
 					?>
 						<a href="personal.php">ึ๗าณ</a>

@@ -65,9 +65,9 @@
 					<div class='menu'>				
 					<?php	
 						session_start();
-						$username=$_SESSION['username'];
-						echo "<a href='setting.php'>$mail</a>";
-						echo "$username";
+						$mail=$_SESSION['username'];
+						echo "<a href='setting.php?name=$username'>$mail</a>";
+						echo "$mail";
 					?>
 						<a href="personal.php">Ö÷Ò³</a>
             <a href="letter.php">Ë½ÐÅ</a>

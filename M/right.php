@@ -44,11 +44,11 @@
 			           color:Black}
 			.menu a:hover {background-color:#dfeeff }
 			.right{
-					width:200px;background-color:#ffffff;
-					margin-right:200px ;margin-top:47px;	float:right;			
+					width:10%;background-color:#ffffff;
+					margin-right:24% ;margin-top:47px;	float:right;			
 				}
-			.center{width:650px;background-color:#ffffff;
-				float:left;margin-left:200px;margin-top:47px;}
+			.center{width:40%;background-color:#ffffff;
+				float:left;margin-left:24%;margin-top:47px;}
 			.information{width:160px;float:right;margin-right:20px;}
 			img{width:40px;height:40px;margin-top:10px; }
 			#zhi{font-family:"¡• È";font-size:40px;}			

@@ -80,10 +80,18 @@
 						$id=$QuRow['id'];
 						$uid=$QuRow['uid'];
 						
-						//将来实现点击一个题目链接进入题目界面
+						//实现点击一个题目链接进入题目界面
 						$num=1;
-						echo "&nbsp<p><a href='showask.php?p=$id'><b> $num:$title</b></a>";
-						echo "<a href='deletequestion.php?id=$id&name=$name' id='shanchu'>删除</a><p><hr/>";
+						if($title)
+						{
+							echo "&nbsp<p><a href='showask.php?p=$id'><b> $num:$title</b></a>";
+							echo "<a href='deletequestion.php?id=$id&name=$name' id='shanchu'>删除</a><p><hr/>";
+						}
+						else if(!$title)						
+						{
+							echo "<p><a href='#'> 暂无提问</a><p>";
+							//echo "暂无提问";
+						}
 						while($QuRow)
 						{
 							$QuRow=mysql_fetch_array($result);						
@@ -128,7 +136,15 @@
 						$AnQuRow=mysql_fetch_array($result2);							
 						$AnQuTitle=$AnQuRow['title'];
 						$num1=1;
-						echo "<p><a href='showanswer.php?a=$qid'><b> $num1 :$AnQuTitle</b></a><br/><p>";
+						if($AnQuTitle)
+						{
+							echo "<p><a href='showanswer.php?a=$qid'><b> $num1 :$AnQuTitle</b></a><br/><p>";						
+						}
+						else if(!$AnQuTitle)
+						{
+							echo "<p><a href='#?a=$qid'>暂无回答</a><br/><p>";
+							//echo "暂无回答";
+						}
 						
 						
 						//将所有的回答表中的uid和该用户相同的回答的qid都选出来	
@@ -155,9 +171,9 @@
 				</div>
 			</div>
 		</div>
-		<div class="setRight">
-			<a href="setting.php"><h3>个人主页</h3></a>
+		<div class="setRight">			
 			<?php
+			echo "<a href='setting.php?name=$name'><h3>个人主页</h3></a>";
 			echo "<a href='showallask.php?name=$name'>所有问题</a><p>";
 			echo "<a href='showallanswer.php?name=$name'>所有回答</a><hr/>";
 			?>

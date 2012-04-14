@@ -14,12 +14,20 @@
 		$a=$row['title'];
 		$b=$row['content'];
 		$time=$row['time'];
-		//echo "<h3>$id</h3>";		
-		echo "领域：$a<br/>";
-		echo "提问者：<a href='#' style='color:red;size:20px;'>$author</a>";
-		echo "<br/>提问时间：$time";
-		echo "&nbsp&nbsp <a href='http://localhost/MyZhiHu/answer.php?p=$id'><h3> $a</h3></a>";
-		echo "&nbsp&nbsp&nbsp&nbsp$b</br><hr>";
+		//echo "<h3>$id</h3>";
+		if($row)
+		{
+			echo "领域：$a<br/>";
+			echo "提问者：<a href='#' style='color:red;size:20px;'>$author</a>";
+			echo "<br/>提问时间：$time";
+			echo "&nbsp&nbsp <a href='http://localhost/MyZhiHu/answer.php?p=$id'><h3> $a</h3></a>";
+			echo "&nbsp&nbsp&nbsp&nbsp$b</br><hr>";
+		}	
+		else if(!$row)	
+		{
+			echo "<p><a href='#'>暂无提问</a><br/><p>";
+		}
+		
 	
 	while($row)
 	{

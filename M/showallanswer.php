@@ -112,13 +112,23 @@
 						//将来实现点击一个题目链接进入题目界面
 						//根据qid在问题表中选择出用户回答过的问题
 						$sql2="select * from question where id ='$qid' ";
+						//echo $qid;
 						$result2=mysql_query($sql2,$link);
-						//echo "$result2"	;
-						$AnQuRow=mysql_fetch_array($result2);							
+						//echo $result2;
+						$AnQuRow=mysql_fetch_array($result2);	
+						//print ($AnQuRow);						
 						$AnQuTitle=$AnQuRow['title'];
 						$num1=1;
-						echo "<p><a href='showanswer.php?a=$qid'><b> $num1 :$AnQuTitle</b></a><br/><p>";
-						
+						//echo "<p><a href='showanswer.php?a=$qid'><b> $num1 :$AnQuTitle</b></a><br/><p>";
+						if($AnQuTitle)
+						{
+							echo "<p><a href='showanswer.php?a=$qid'><b> $num1 :$AnQuTitle</b></a><br/><p>";						
+						}
+						else if(!$AnQuTitle)
+						{
+							echo "<p><a href='#'> 暂无回答</a><br/><p>";
+							
+						}
 						
 						//将所有的回答表中的uid和该用户相同的回答的qid都选出来	
 						while($AnRow)	
@@ -126,7 +136,6 @@
 							$AnRow=mysql_fetch_array($result1);	
 							$qid=$AnRow['qid'];
 							//echo "$qid";
-							//将来实现点击一个题目链接进入题目界面
 							//根据qid在问题表中选择出用户回答过的问题
 							$sql2="select * from question where id ='$qid' ";
 							$result2=mysql_query($sql2,$link);

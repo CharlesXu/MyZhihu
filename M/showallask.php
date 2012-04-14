@@ -32,6 +32,7 @@
 			#img{width:80px;height:80px;}
 			#bianji{float:right;margin-right:30px;margin-top:10px;}
 			#tiwen{float:left;margin-top:8px;margin-left:10px;}
+			#shanchu{float:right;margin-right:20px;}
 		</style>
 	</head>
 	<head>
@@ -63,7 +64,7 @@
 			<div class="setTable1">
 				<div class="setTop">
 					<?php
-						//$name=$_GET['name'];
+						$name=$_GET['name'];
 						echo "<a href='#' id='tiwen'><b>$name 的提问</b>";
 					?>
 				</div>
@@ -81,7 +82,17 @@
 						
 						//将来实现点击一个题目链接进入题目界面
 						$num=1;
-						echo "&nbsp<p><a href='showask.php?p=$id'><b> $num:$title</b></a><br/><p>";
+						if($title)
+						{
+							echo "&nbsp<p><a href='showask.php?p=$id'><b> $num:$title</b></a>";
+							echo "<a href='deletequestion.php?id=$id&name=$name' id='shanchu'>删除</a><p><hr/>";
+						}
+						else if(!$title)						
+						{
+							echo "<p><a href='#'>暂无提问</a><br/><p>";
+							//echo "";
+						}
+						//echo "&nbsp<p><a href='showask.php?p=$id'><b> $num:$title</b></a><br/><p>";
 						
 						while($QuRow)
 						{

@@ -2,7 +2,7 @@
 	<head>
 	</head>
 	<head>
-	//<h1>saveAnswer.php</h1>
+	<h1>saveAnswer.php</h1>
 	<?php
 	if(isset($_POST['ans']))
 	{

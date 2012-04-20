@@ -27,7 +27,7 @@
 		$link=mysql_connect('localhost','root','','zhihu')or die("连接数据库失败".mysql_error());//连接数据库
 		mysql_select_db('zhihu'); //选择数据库
 			
-		$sql="insert into answer( qid,uid,time,content) values ('$qid','$uid','$time','$content') ";
+		$sql="insert into answer( qid,uid,content) values ('$qid','$uid','$content') ";
 		mysql_query($sql,$link);//执行插入操作
 		?>
 				<script type="text/javascript">

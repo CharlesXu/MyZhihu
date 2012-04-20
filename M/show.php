@@ -25,7 +25,8 @@
 		}	
 		else if(!$row)	
 		{
-			echo "<p><a href='#'>暂无提问</a><br/><p>";
+			echo "<p><a href='#'>暂无提问</a>";
+			echo "&nbsp&nbsp&nbsp&nbsp<a href='ask.php'>现在去提问？</a><p>";
 		}
 		
 	

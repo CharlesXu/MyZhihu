@@ -44,7 +44,7 @@
 			           color:Black}
 			.menu a:hover {background-color:#dfeeff }
 			.right{
-					width:10%;background-color:#ffffff;
+					width:15%;background-color:#ffffff;
 					margin-right:24% ;margin-top:47px;	float:right;			
 				}
 			.center{width:40%;height:auto;background-color:#ffffff;
@@ -88,8 +88,9 @@
 				</div>
 		</div>					
 			</form>
-			<a href="login.php" style="float:right;margin-right:30px"><h3>ÍË³ö</h3></a>
-		</div>				 
+			
+		</div>
+			<a href="login.php" style="float:right;margin-right:30px"><h3>ÍË³ö</h3></a>				 
 		</div>
 		
 		<div class='center'>

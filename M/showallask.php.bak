@@ -89,8 +89,9 @@
 						}
 						else if(!$title)						
 						{
-							echo "<p><a href='#'>暂无提问</a><br/><p>";
-							echo "";
+							echo "<p><a href='#'>暂无提问</a>";
+							echo "&nbsp&nbsp&nbsp&nbsp<a href='ask.php'>现在去提问？</a><p>";
+							//echo "";
 						}
 						//echo "&nbsp<p><a href='showask.php?p=$id'><b> $num:$title</b></a><br/><p>";
 						
@@ -102,7 +103,8 @@
 							$id=$QuRow['id'];
 							if($title)
 							{
-								echo "&nbsp&nbsp<a href='showask.php?p=$id'><b> $num:$title</b></br><p>";	
+								echo "&nbsp&nbsp<a href='showask.php?p=$id'><b> $num:$title</b></br>";	
+								echo "<a href='deletequestion.php?id=$id&name=$name' id='shanchu'>删除</a><p><hr/>";
 							}													
 						}					
 						

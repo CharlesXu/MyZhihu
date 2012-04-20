@@ -104,7 +104,7 @@
 						mysql_select_db('zhihu'); //选择数据库
 						
 						//从answer表中根据用户的uid选择出该用户回答过的问题的qid
-						$sql1="select * from answer where uid ='$uid' ";
+						$sql1="select distinct qid from answer where uid ='$uid' ";
 						$result1=mysql_query($sql1,$link);
 						$AnRow=mysql_fetch_array($result1);	
 						$qid=$AnRow['qid'];
@@ -127,7 +127,7 @@
 						else if(!$AnQuTitle)
 						{
 							echo "<p><a href='#'> 暂无回答</a><br/><p>";
-							
+							echo "&nbsp&nbsp&nbsp&nbsp<a href='ask.php'>现在去提问？</a><p>";
 						}
 						
 						//将所有的回答表中的uid和该用户相同的回答的qid都选出来	

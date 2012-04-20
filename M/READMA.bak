@@ -26,3 +26,4 @@ showallask.php------ÏÔÊ¾¸öÈËËùÌáµÄËùÓÐÎÊÌâµÄ½çÃæ£¨µã»÷setting.phpÖÐµÄ¡®ËùÓÐÎÊÌâ¡
 showanswer.php-----ÔÚsetting.phpÖÐµã»÷Ò»¸ö×Ô¼ºÌáµÄÎÊÌâÊ±ÏÔÊ¾³öµÄ½çÃæ£¨ÏÔÊ¾¸ÃÎÊÌâµÄÄÚÈÝºÍ»Ø´ð£©
 showask.php-----ÔÚsetting.phpÖÐµã»÷Ò»¸ö×Ô¼º»Ø´ð¹ýµÄÎÊÌâµÄÌâÄ¿ºóÏÔÊ¾³öµÄ½çÃæ£¨ÏÔÊ¾¸ÃÎÊÌâµÄÄÚÈÝºÍ»Ø´ð£©
 deletequestion.php-----É¾³ýÎÊÌâµÄÎÄ¼þ£¨ÔÚsetting.phpÖÐ²Ù×÷£©
+deleteanswer.php---------É¾³ý»Ø´ðµÄ²Ù×÷

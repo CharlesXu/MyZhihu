@@ -44,7 +44,7 @@
 			           color:Black}
 			.menu a:hover {background-color:#dfeeff }
 			.right{
-					width:10%;background-color:#ffffff;
+					width:12%;background-color:#ffffff;
 					margin-right:24% ;margin-top:47px;	float:right;			
 				}
 			.center{width:40%;height:auto;background-color:#ffffff;

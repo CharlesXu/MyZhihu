@@ -89,7 +89,8 @@
 						}
 						else if(!$title)						
 						{
-							echo "<p><a href='#'> 暂无提问</a><p>";
+							echo "<p><a href='#'> 暂无提问</a>";
+							echo "&nbsp&nbsp&nbsp&nbsp<a href='ask.php'>现在去提问？</a><p>";
 							//echo "暂无提问";
 						}
 						while($QuRow)
@@ -171,9 +172,9 @@
 				</div>
 			</div>
 		</div>
-		<div class="setRight">
-			<a href="setting.php"><h3>个人主页</h3></a>
+		<div class="setRight">			
 			<?php
+			echo "<a href='setting.php?name=$name'><h3>个人主页</h3></a>";
 			echo "<a href='showallask.php?name=$name'>所有问题</a><p>";
 			echo "<a href='showallanswer.php?name=$name'>所有回答</a><hr/>";
 			?>

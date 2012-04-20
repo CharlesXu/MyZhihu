@@ -119,16 +119,16 @@
 						//print ($AnQuRow);						
 						$AnQuTitle=$AnQuRow['title'];
 						$num1=1;
-						echo "<p><a href='showanswer.php?a=$qid'><b> $num1 :$AnQuTitle</b></a><br/><p>";
-						/*if($AnQuTitle)
+						//echo "<p><a href='showanswer.php?a=$qid'><b> $num1 :$AnQuTitle</b></a><br/><p>";
+						if($AnQuTitle)
 						{
 							echo "<p><a href='showanswer.php?a=$qid'><b> $num1 :$AnQuTitle</b></a><br/><p>";						
 						}
 						else if(!$AnQuTitle)
 						{
 							echo "<p><a href='#'> 暂无回答</a><br/><p>";
-							
-						}*/
+							echo "&nbsp&nbsp&nbsp&nbsp<a href='ask.php'>现在去提问？</a><p>";
+						}
 						
 						//将所有的回答表中的uid和该用户相同的回答的qid都选出来	
 						while($AnRow)	
